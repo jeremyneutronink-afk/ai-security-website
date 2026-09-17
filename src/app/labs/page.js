@@ -185,6 +185,45 @@ export default function LabsPage() {
   </div>
 </div>
 
+<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
+  <div className="flex justify-between items-start gap-6 flex-wrap">
+    <div>
+      <p className="text-sm text-neutral-500 mb-3">LAB 05</p>
+
+      <h2 className="text-2xl font-semibold mb-4">
+        Prompt Injection Against Tool Use
+      </h2>
+
+      <p className="text-neutral-400 max-w-2xl leading-7">
+        An AI agent security lab testing indirect prompt injection against
+        simulated tools, external authorization, human approval gates, and
+        provenance-aware policy enforcement.
+      </p>
+    </div>
+
+    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
+      Agent Security
+    </span>
+  </div>
+
+  <div className="flex gap-4 mt-8 flex-wrap">
+    <a
+      href="/labs/lab-05-tool-use-prompt-injection"
+      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
+    >
+      View Lab
+    </a>
+
+    <a
+      href="https://github.com/jeremyneutronink-afk/lab-05-tool-use-prompt-injection"
+      target="_blank"
+      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
+    >
+      View Code
+    </a>
+  </div>
+</div>
+
       </div>
     </main>
   );
