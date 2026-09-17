@@ -106,6 +106,47 @@ export default function LabsPage() {
   </div>
 </div>
 
+<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
+  <div className="flex justify-between items-start gap-6 flex-wrap">
+    <div>
+      <p className="text-sm text-neutral-500 mb-3">
+        LAB 03
+      </p>
+
+      <h2 className="text-2xl font-semibold mb-4">
+        First Real AI Model Request
+      </h2>
+
+      <p className="text-neutral-400 max-w-2xl leading-7">
+        A Python lab using the OpenAI Responses API with secure environment-based
+        credential handling, restricted API permissions, response metadata
+        inspection, token monitoring, and defensive error handling.
+      </p>
+    </div>
+
+    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
+      Python + AI API
+    </span>
+  </div>
+
+  <div className="flex gap-4 mt-8 flex-wrap">
+    <a
+      href="/labs/lab-03-first-ai-request"
+      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
+    >
+      View Lab
+    </a>
+
+    <a
+      href="https://github.com/jeremyneutronink-afk/lab-03-first-ai-request"
+      target="_blank"
+      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
+    >
+      View Code
+    </a>
+  </div>
+</div>
+
       </div>
     </main>
   );
