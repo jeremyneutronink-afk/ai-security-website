@@ -302,6 +302,46 @@ export default function LabsPage() {
   </div>
 </div>
 
+<div className="border border-neutral-800 rounded-2xl p-8">
+  <p className="text-sm font-semibold tracking-widest text-neutral-500">
+    LAB 08
+  </p>
+
+  <h2 className="mt-3 text-2xl font-bold">
+    Stateful AI Security Controls
+  </h2>
+
+  <p className="mt-4 text-neutral-400">
+    A stateful AI security experiment combining progressive risk scoring,
+    event correlation, pre-execution enforcement, human approval, scoped
+    authorization, RBAC, capabilities, and adversarial testing.
+  </p>
+
+  <div className="mt-5">
+    <span className="inline-block rounded-full border border-neutral-700 px-3 py-1 text-sm text-neutral-300">
+      AI Security
+    </span>
+  </div>
+
+  <div className="mt-6 flex flex-wrap gap-3">
+    <a
+      href="/labs/lab-08-stateful-ai-security-controls"
+      className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-neutral-200"
+    >
+      View Lab
+    </a>
+
+    <a
+      href="https://github.com/jeremyneutronink-afk/lab-08-stateful-ai-security-controls"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-lg border border-neutral-700 px-4 py-2 text-sm font-semibold transition hover:bg-neutral-900"
+    >
+      View Code
+    </a>
+  </div>
+</div>
+
       </div>
     </main>
   );
