@@ -382,6 +382,56 @@ export default function LabsPage() {
   </div>
 </div>
 
+{/* LAB 10 — Secure Agent Memory and State */}
+<a
+  href="/labs/lab-10-secure-agent-memory"
+  className="group block rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition hover:border-cyan-500/60 hover:bg-zinc-900"
+>
+  <div className="flex items-start justify-between gap-4">
+    <div>
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+        Lab 10
+      </p>
+
+      <h3 className="mt-2 text-2xl font-bold text-zinc-100">
+        Secure Agent Memory and State
+      </h3>
+    </div>
+
+    <span className="rounded-full border border-emerald-800 bg-emerald-950/40 px-3 py-1 text-xs font-semibold text-emerald-400">
+      15/15 Passed
+    </span>
+  </div>
+
+  <p className="mt-4 leading-7 text-zinc-400">
+    Built a secure persistent-memory layer for AI agents with signed
+    provenance, replay protection, freshness checks, scope isolation,
+    sensitive-data controls, purpose limitation, and context minimization.
+  </p>
+
+  <div className="mt-5 flex flex-wrap gap-2 text-xs text-zinc-400">
+    {[
+      "AI Security",
+      "Agent Memory",
+      "Provenance",
+      "HMAC",
+      "Replay Protection",
+      "Access Control",
+    ].map((tag) => (
+      <span
+        key={tag}
+        className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1"
+      >
+        {tag}
+      </span>
+    ))}
+  </div>
+
+  <p className="mt-6 font-semibold text-zinc-200 transition group-hover:text-cyan-400">
+    View Lab →
+  </p>
+</a>
+
       </div>
     </main>
   );
