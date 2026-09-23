@@ -1,437 +1,258 @@
-export default function LabsPage() {
-  return (
-    <main className="min-h-screen bg-black text-white px-6 py-16">
-      <div className="max-w-5xl mx-auto">
-        <a
-          href="/"
-          className="text-sm text-neutral-400 hover:text-white transition"
-        >
-          ← Back Home
-        </a>
-
-        <div className="mt-10 mb-12">
-          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-4">
-            Research & Experiments
-          </p>
-
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            AI Security Labs
-          </h1>
-
-          <p className="text-lg text-neutral-400 max-w-3xl leading-8">
-            Hands-on experiments exploring AI systems, security boundaries,
-            agent behavior, adversarial testing, and defensive controls.
-          </p>
-        </div>
-
-        <div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition">
-          <div className="flex justify-between items-start gap-6 flex-wrap">
-            <div>
-              <p className="text-sm text-neutral-500 mb-3">
-                LAB 01
-              </p>
-
-              <h2 className="text-2xl font-semibold mb-4">
-                Anatomy of an AI API Request
-              </h2>
-
-              <p className="text-neutral-400 max-w-2xl leading-7">
-                A foundational Python lab breaking down an AI API request into
-                its endpoint, authentication headers, request body, environment
-                variables, and core security boundaries.
-              </p>
-            </div>
-
-            <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-              Python
-            </span>
-          </div>
-
-          <div className="flex gap-4 mt-8 flex-wrap">
-            <a
-              href="/labs/lab-01-ai-request"
-              className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-            >
-              View Lab
-            </a>
-
-            <a
-              href="https://github.com/jeremyneutronink-afk/lab-01-ai-request"
-              target="_blank"
-              className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-            >
-              View Code
-            </a>
-          </div>
-        </div>
-
-<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
-  <div className="flex justify-between items-start gap-6 flex-wrap">
-    <div>
-      <p className="text-sm text-neutral-500 mb-3">
-        LAB 02
-      </p>
-
-      <h2 className="text-2xl font-semibold mb-4">
-        Real API Requests & Failure Handling
-      </h2>
-
-      <p className="text-neutral-400 max-w-2xl leading-7">
-        A Python lab using the live GitHub API to inspect HTTP responses,
-        parse JSON, validate status codes, and safely handle 404s,
-        connection failures, and timeouts.
-      </p>
-    </div>
-
-    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-      Python
-    </span>
-  </div>
-
-  <div className="flex gap-4 mt-8 flex-wrap">
-    <a
-      href="/labs/lab-02-real-api-request"
-      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-02-real-api-request"
-      target="_blank"
-      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
-  <div className="flex justify-between items-start gap-6 flex-wrap">
-    <div>
-      <p className="text-sm text-neutral-500 mb-3">
-        LAB 03
-      </p>
-
-      <h2 className="text-2xl font-semibold mb-4">
-        First Real AI Model Request
-      </h2>
-
-      <p className="text-neutral-400 max-w-2xl leading-7">
-        A Python lab using the OpenAI Responses API with secure environment-based
-        credential handling, restricted API permissions, response metadata
-        inspection, token monitoring, and defensive error handling.
-      </p>
-    </div>
-
-    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-      Python + AI API
-    </span>
-  </div>
-
-  <div className="flex gap-4 mt-8 flex-wrap">
-    <a
-      href="/labs/lab-03-first-ai-request"
-      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-03-first-ai-request"
-      target="_blank"
-      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
-  <div className="flex justify-between items-start gap-6 flex-wrap">
-    <div>
-      <p className="text-sm text-neutral-500 mb-3">LAB 04</p>
-
-      <h2 className="text-2xl font-semibold mb-4">
-        Trusted vs. Untrusted Input
-      </h2>
-
-      <p className="text-neutral-400 max-w-2xl leading-7">
-        An AI security experiment comparing weak and hardened prompt
-        architectures across three rounds of indirect prompt-injection testing.
-      </p>
-    </div>
-
-    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-      AI Security
-    </span>
-  </div>
-
-  <div className="flex gap-4 mt-8 flex-wrap">
-    <a
-      href="/labs/lab-04-trusted-untrusted-input"
-      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-04-trusted-untrusted-input"
-      target="_blank"
-      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
-  <div className="flex justify-between items-start gap-6 flex-wrap">
-    <div>
-      <p className="text-sm text-neutral-500 mb-3">LAB 05</p>
-
-      <h2 className="text-2xl font-semibold mb-4">
-        Prompt Injection Against Tool Use
-      </h2>
-
-      <p className="text-neutral-400 max-w-2xl leading-7">
-        An AI agent security lab testing indirect prompt injection against
-        simulated tools, external authorization, human approval gates, and
-        provenance-aware policy enforcement.
-      </p>
-    </div>
-
-    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-      Agent Security
-    </span>
-  </div>
-
-  <div className="flex gap-4 mt-8 flex-wrap">
-    <a
-      href="/labs/lab-05-tool-use-prompt-injection"
-      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-05-tool-use-prompt-injection"
-      target="_blank"
-      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
-  <div className="flex justify-between items-start gap-6 flex-wrap">
-    <div>
-      <p className="text-sm text-neutral-500 mb-3">LAB 06</p>
-
-      <h2 className="text-2xl font-semibold mb-4">
-        Prompt Injection Playground
-      </h2>
-
-      <p className="text-neutral-400 max-w-2xl leading-7">
-        A system-level prompt-injection experiment comparing a vulnerable
-        controller with a provenance-aware hardened architecture using the
-        same model outputs and attack documents.
-      </p>
-    </div>
-
-    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-      AI Security + Evals
-    </span>
-  </div>
-
-  <div className="flex gap-4 mt-8 flex-wrap">
-    <a
-      href="/labs/lab-06-prompt-injection-playground"
-      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-06-prompt-injection-playground"
-      target="_blank"
-      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8 hover:border-neutral-600 transition mt-6">
-  <div className="flex justify-between items-start gap-6 flex-wrap">
-    <div>
-      <p className="text-sm text-neutral-500 mb-3">LAB 07</p>
-
-      <h2 className="text-2xl font-semibold mb-4">
-        Security Audit Logging & Incident Scoring
-      </h2>
-
-      <p className="text-neutral-400 max-w-2xl leading-7">
-        A security telemetry lab building structured audit logs, detection
-        rules, alert generation, risk scoring, and incident severity
-        classification for AI tool-use events.
-      </p>
-    </div>
-
-    <span className="text-sm border border-neutral-700 rounded-full px-4 py-2 text-neutral-300">
-      Security Telemetry
-    </span>
-  </div>
-
-  <div className="flex gap-4 mt-8 flex-wrap">
-    <a
-      href="/labs/lab-07-security-audit-logging"
-      className="bg-white text-black px-5 py-3 rounded-lg font-semibold"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-07-security-audit-logging"
-      target="_blank"
-      className="border border-neutral-700 px-5 py-3 rounded-lg font-semibold"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8">
-  <p className="text-sm font-semibold tracking-widest text-neutral-500">
-    LAB 08
-  </p>
-
-  <h2 className="mt-3 text-2xl font-bold">
-    Stateful AI Security Controls
-  </h2>
-
-  <p className="mt-4 text-neutral-400">
-    A stateful AI security experiment combining progressive risk scoring,
-    event correlation, pre-execution enforcement, human approval, scoped
-    authorization, RBAC, capabilities, and adversarial testing.
-  </p>
-
-  <div className="mt-5">
-    <span className="inline-block rounded-full border border-neutral-700 px-3 py-1 text-sm text-neutral-300">
-      AI Security
-    </span>
-  </div>
-
-  <div className="mt-6 flex flex-wrap gap-3">
-    <a
-      href="/labs/lab-08-stateful-ai-security-controls"
-      className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-neutral-200"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-08-stateful-ai-security-controls"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-lg border border-neutral-700 px-4 py-2 text-sm font-semibold transition hover:bg-neutral-900"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-<div className="border border-neutral-800 rounded-2xl p-8">
-  <p className="text-sm font-semibold tracking-widest text-neutral-500">
-    LAB 09
-  </p>
-
-  <h2 className="mt-3 text-2xl font-bold">
-    Secure Tool Execution
-  </h2>
-
-  <p className="mt-4 text-neutral-400">
-    A secure execution layer for AI agents using tool allowlists, schema
-    validation, risk classification, prompt-injection defenses, scoped
-    approvals, capabilities, replay protection, and adversarial testing.
-  </p>
-
-  <div className="mt-5">
-    <span className="inline-block rounded-full border border-neutral-700 px-3 py-1 text-sm text-neutral-300">
-      AI Agent Security
-    </span>
-  </div>
-
-  <div className="mt-6 flex flex-wrap gap-3">
-    <a
-      href="/labs/lab-09-secure-tool-execution"
-      className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-neutral-200"
-    >
-      View Lab
-    </a>
-
-    <a
-      href="https://github.com/jeremyneutronink-afk/lab-09-secure-tool-execution"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-lg border border-neutral-700 px-4 py-2 text-sm font-semibold transition hover:bg-neutral-900"
-    >
-      View Code
-    </a>
-  </div>
-</div>
-
-{/* LAB 10 — Secure Agent Memory and State */}
-<a
-  href="/labs/lab-10-secure-agent-memory"
-  className="group block rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition hover:border-cyan-500/60 hover:bg-zinc-900"
->
-  <div className="flex items-start justify-between gap-4">
-    <div>
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
-        Lab 10
-      </p>
-
-      <h3 className="mt-2 text-2xl font-bold text-zinc-100">
-        Secure Agent Memory and State
-      </h3>
-    </div>
-
-    <span className="rounded-full border border-emerald-800 bg-emerald-950/40 px-3 py-1 text-xs font-semibold text-emerald-400">
-      15/15 Passed
-    </span>
-  </div>
-
-  <p className="mt-4 leading-7 text-zinc-400">
-    Built a secure persistent-memory layer for AI agents with signed
-    provenance, replay protection, freshness checks, scope isolation,
-    sensitive-data controls, purpose limitation, and context minimization.
-  </p>
-
-  <div className="mt-5 flex flex-wrap gap-2 text-xs text-zinc-400">
-    {[
+const labs = [
+  {
+    number: "01",
+    title: "Anatomy of an AI API Request",
+    description:
+      "A foundational Python lab breaking down an AI API request into its endpoint, authentication headers, request body, environment variables, and core security boundaries.",
+    route: "/labs/lab-01-ai-request",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-01-ai-request",
+    tags: ["Python", "API Security", "HTTP"],
+  },
+  {
+    number: "02",
+    title: "Real API Requests & Failure Handling",
+    description:
+      "A Python lab using the live GitHub API to inspect HTTP responses, parse JSON, validate status codes, and safely handle 404s, connection failures, and timeouts.",
+    route: "/labs/lab-02-real-api-request",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-02-real-api-request",
+    tags: ["Python", "GitHub API", "Error Handling"],
+  },
+  {
+    number: "03",
+    title: "First Real AI Model Request",
+    description:
+      "A Python lab using the OpenAI Responses API with secure environment-based credential handling, restricted API permissions, response metadata inspection, token monitoring, and defensive error handling.",
+    route: "/labs/lab-03-first-ai-request",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-03-first-ai-request",
+    tags: ["Python", "AI API", "Credential Security"],
+  },
+  {
+    number: "04",
+    title: "Trusted vs. Untrusted Input",
+    description:
+      "An AI security experiment comparing weak and hardened prompt architectures across three rounds of indirect prompt-injection testing.",
+    route: "/labs/lab-04-trusted-untrusted-input",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-04-trusted-untrusted-input",
+    tags: ["AI Security", "Prompt Injection", "Trust Boundaries"],
+  },
+  {
+    number: "05",
+    title: "Prompt Injection Against Tool Use",
+    description:
+      "An AI agent security lab testing indirect prompt injection against simulated tools, external authorization, human approval gates, and provenance-aware policy enforcement.",
+    route: "/labs/lab-05-tool-use-prompt-injection",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-05-tool-use-prompt-injection",
+    tags: ["Agent Security", "Tool Use", "Human Approval"],
+  },
+  {
+    number: "06",
+    title: "Prompt Injection Playground",
+    description:
+      "A system-level prompt-injection experiment comparing a vulnerable controller with a provenance-aware hardened architecture using the same model outputs and attack documents.",
+    route: "/labs/lab-06-prompt-injection-playground",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-06-prompt-injection-playground",
+    tags: ["AI Security", "Evals", "Prompt Injection"],
+  },
+  {
+    number: "07",
+    title: "Security Audit Logging & Incident Scoring",
+    description:
+      "A security telemetry lab building structured audit logs, detection rules, alert generation, risk scoring, and incident severity classification for AI tool-use events.",
+    route: "/labs/lab-07-security-audit-logging",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-07-security-audit-logging",
+    tags: ["Security Telemetry", "Audit Logging", "Risk Scoring"],
+  },
+  {
+    number: "08",
+    title: "Stateful AI Security Controls",
+    description:
+      "A stateful AI security experiment combining progressive risk scoring, event correlation, pre-execution enforcement, human approval, scoped authorization, RBAC, capabilities, and adversarial testing.",
+    route: "/labs/lab-08-stateful-ai-security-controls",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-08-stateful-ai-security-controls",
+    tags: ["AI Security", "Stateful Controls", "RBAC", "Capabilities"],
+    result: "13/13 Passed",
+  },
+  {
+    number: "09",
+    title: "Secure Tool Execution",
+    description:
+      "A secure execution layer for AI agents using tool allowlists, schema validation, risk classification, prompt-injection defenses, scoped approvals, capabilities, replay protection, and adversarial testing.",
+    route: "/labs/lab-09-secure-tool-execution",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-09-secure-tool-execution",
+    tags: [
+      "AI Agent Security",
+      "Tool Execution",
+      "Capabilities",
+      "Replay Protection",
+    ],
+    result: "14/14 Passed",
+  },
+  {
+    number: "10",
+    title: "Secure Agent Memory and State",
+    description:
+      "Built a secure persistent-memory layer for AI agents with signed provenance, replay protection, freshness checks, scope isolation, sensitive-data controls, purpose limitation, and context minimization.",
+    route: "/labs/lab-10-secure-agent-memory",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-10-secure-agent-memory",
+    tags: [
       "AI Security",
       "Agent Memory",
       "Provenance",
       "HMAC",
       "Replay Protection",
       "Access Control",
-    ].map((tag) => (
-      <span
-        key={tag}
-        className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1"
-      >
-        {tag}
-      </span>
-    ))}
-  </div>
+    ],
+    result: "15/15 Passed",
+  },
+  {
+    number: "11",
+    title: "Agent Identity, Delegation, and Authority Chains",
+    description:
+      "Built a secure authority model for AI agents with authenticated identities, scoped delegation, signed authority tokens, replay protection, controlled re-delegation, full authority-chain validation, and confused-deputy defenses.",
+    route: "/labs/lab-11-agent-identity-delegation",
+    github:
+      "https://github.com/jeremyneutronink-afk/lab-11-agent-identity-delegation",
+    tags: [
+      "AI Security",
+      "Agent Identity",
+      "Delegation",
+      "Authority Chains",
+      "Replay Protection",
+      "HMAC",
+    ],
+    result: "17/17 Passed",
+  },
+];
 
-  <p className="mt-6 font-semibold text-zinc-200 transition group-hover:text-cyan-400">
-    View Lab →
-  </p>
-</a>
+function LabCard({ lab }) {
+  return (
+    <article className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8 transition duration-200 hover:border-cyan-500/60 hover:bg-zinc-900">
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Lab {lab.number}
+          </p>
 
+          <h2 className="mt-2 text-2xl font-bold text-zinc-100 sm:text-3xl">
+            {lab.title}
+          </h2>
+        </div>
+
+        {lab.result && (
+          <span className="rounded-full border border-emerald-800 bg-emerald-950/40 px-3 py-1 text-xs font-semibold text-emerald-400">
+            {lab.result}
+          </span>
+        )}
+      </div>
+
+      <p className="mt-4 max-w-3xl leading-7 text-zinc-400">
+        {lab.description}
+      </p>
+
+      <div className="mt-5 flex flex-wrap gap-2">
+        {lab.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1 text-xs text-zinc-400"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="mt-7 flex flex-wrap gap-3">
+        <a
+          href={lab.route}
+          className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200"
+        >
+          View Lab
+        </a>
+
+        <a
+          href={lab.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-lg border border-zinc-700 px-5 py-3 text-sm font-semibold text-zinc-200 transition hover:border-zinc-500 hover:bg-zinc-950"
+        >
+          View Code
+        </a>
+      </div>
+    </article>
+  );
+}
+
+export default function LabsPage() {
+  return (
+    <main className="min-h-screen bg-black px-6 py-16 text-white">
+      <div className="mx-auto max-w-5xl">
+        <a
+          href="/"
+          className="text-sm text-zinc-500 transition hover:text-white"
+        >
+          ← Back Home
+        </a>
+
+        <header className="mb-14 mt-10">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
+            Research &amp; Experiments
+          </p>
+
+          <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
+            AI Security Labs
+          </h1>
+
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+            Hands-on experiments exploring AI systems, security boundaries,
+            agent behavior, adversarial testing, and defensive controls.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <div className="rounded-full border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-sm text-zinc-400">
+              11 Labs Completed
+            </div>
+
+            <div className="rounded-full border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-sm text-zinc-400">
+              AI Security &amp; Control
+            </div>
+
+            <div className="rounded-full border border-zinc-800 bg-zinc-900/50 px-4 py-2 text-sm text-zinc-400">
+              Python
+            </div>
+          </div>
+        </header>
+
+        <section className="space-y-6">
+          {labs.map((lab) => (
+            <LabCard key={lab.number} lab={lab} />
+          ))}
+        </section>
+
+        <section className="mt-16 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Ongoing Curriculum
+          </p>
+
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+            Building toward production-grade AI security
+          </h2>
+
+          <p className="mt-4 max-w-3xl leading-7 text-zinc-400">
+            Each lab adds another security layer to the systems developed
+            earlier in the curriculum, moving from basic API mechanics toward
+            secure autonomous agents, authority controls, adversarial testing,
+            monitoring, and system-level AI security.
+          </p>
+        </section>
       </div>
     </main>
   );

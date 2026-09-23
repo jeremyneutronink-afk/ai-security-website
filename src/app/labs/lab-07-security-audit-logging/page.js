@@ -1,243 +1,274 @@
 export default function Lab07Page() {
+  const stages = [
+    {
+      stage: "Stage 1",
+      title: "Structured Audit Logging",
+      description:
+        "Each security-relevant tool request was written to a JSONL log with timestamp, source, tool, decision, reason, authorization state, and arguments.",
+      result: "6 structured security events recorded",
+    },
+    {
+      stage: "Stage 2",
+      title: "Detection Rules",
+      description:
+        "Detection logic identified denied actions, untrusted sources, unauthorized high-risk tools, restricted file access, and unknown tools.",
+      result: "4 alerted events and 8 total alerts",
+    },
+    {
+      stage: "Stage 3",
+      title: "Risk Scoring & Severity",
+      description:
+        "Alerts were weighted and combined into per-event risk scores, which were then classified as INFO, LOW, MEDIUM, HIGH, or CRITICAL.",
+      result: "Highest-risk event: score 8 — CRITICAL",
+    },
+  ];
+
+  const skills = [
+    "Python",
+    "JSON",
+    "JSONL",
+    "Security Logging",
+    "Detection Engineering",
+    "Risk Scoring",
+    "Incident Severity",
+    "Security Telemetry",
+    "Agent Security",
+    "Threat Monitoring",
+    "Authorization Logging",
+  ];
+
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-16">
-      <div className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-black text-white">
+      <div className="mx-auto max-w-5xl px-6 py-16">
         <a
           href="/labs"
-          className="text-sm text-neutral-400 hover:text-white transition"
+          className="text-sm text-zinc-500 transition hover:text-white"
         >
           ← Back to Labs
         </a>
 
-        <div className="mt-10 mb-12">
-          <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-4">
-            Lab 07
+        <header className="mt-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+            AI Security &amp; Control Curriculum · Lab 07
           </p>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Security Audit Logging & Incident Scoring
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">
+            Security Audit Logging &amp; Incident Scoring
           </h1>
 
-          <p className="text-lg text-neutral-400 leading-8">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
             An AI security telemetry lab focused on structured audit logging,
             detection rules, alert generation, risk scoring, and incident
             prioritization.
           </p>
-        </div>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">Video Recap</h2>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="https://github.com/jeremyneutronink-afk/lab-07-security-audit-logging"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-white px-5 py-3 font-semibold text-black transition hover:bg-zinc-200"
+            >
+              View GitHub Repo
+            </a>
 
-          <div className="max-w-sm mx-auto overflow-hidden rounded-2xl border border-neutral-800">
+            <a
+              href="https://youtube.com/shorts/wd1OIWbLxMg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-zinc-700 px-5 py-3 font-semibold transition hover:border-zinc-500 hover:bg-zinc-900"
+            >
+              Watch Short
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {[
+              "Python",
+              "Security Telemetry",
+              "Detection Engineering",
+              "Risk Scoring",
+              "Incident Severity",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1 text-xs text-zinc-400"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </header>
+
+        <section className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <p className="text-sm text-zinc-400">Events</p>
+            <p className="mt-2 text-4xl font-bold">6</p>
+          </div>
+
+          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <p className="text-sm text-zinc-400">Alerts</p>
+            <p className="mt-2 text-4xl font-bold">8</p>
+          </div>
+
+          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <p className="text-sm text-zinc-400">High Severity</p>
+            <p className="mt-2 text-4xl font-bold text-amber-400">2</p>
+          </div>
+
+          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+            <p className="text-sm text-zinc-400">Critical</p>
+            <p className="mt-2 text-4xl font-bold text-red-400">1</p>
+          </div>
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-cyan-900/60 bg-cyan-950/20 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Core Security Idea
+          </p>
+
+          <h2 className="mt-3 text-3xl font-bold">
+            Blocking an action is not enough.
+          </h2>
+
+          <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
+            A mature AI security system also needs telemetry that makes
+            suspicious behavior visible, measurable, explainable, and
+            prioritizable after the policy decision is made.
+          </p>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold">Lab 07 Short</h2>
+
+          <p className="mt-3 text-zinc-400">
+            A short walkthrough of the security logging, detection, alerting,
+            and incident-scoring pipeline.
+          </p>
+
+          <div className="mt-6 max-w-sm overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
             <div className="aspect-[9/16]">
               <iframe
-                className="w-full h-full"
+                className="h-full w-full"
                 src="https://www.youtube.com/embed/wd1OIWbLxMg"
-                title="Lab 07 Video Recap"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                title="Lab 07 Security Audit Logging and Incident Scoring"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
           </div>
         </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">What I Built</h2>
+        <section className="mt-16">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Telemetry Pipeline
+          </p>
 
-          <p className="text-neutral-400 leading-8">
+          <h2 className="mt-3 text-3xl font-bold">What I Built</h2>
+
+          <p className="mt-4 max-w-3xl leading-7 text-zinc-400">
             I built a structured security telemetry pipeline that records
             tool-use decisions, detects suspicious patterns, generates alerts,
             assigns risk scores, and classifies incidents by severity.
           </p>
-        </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">Security Pipeline</h2>
-
-          <div className="border border-neutral-800 rounded-2xl p-6 font-mono text-sm text-neutral-300 leading-8">
-            Tool Request
-            <br />
-            ↓
-            <br />
-            Policy Decision
-            <br />
-            ↓
-            <br />
-            Structured Audit Event
-            <br />
-            ↓
-            <br />
-            Detection Rules
-            <br />
-            ↓
-            <br />
-            Alerts
-            <br />
-            ↓
-            <br />
-            Risk Score
-            <br />
-            ↓
-            <br />
-            Severity Classification
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
+            <pre className="whitespace-pre text-sm leading-7 text-cyan-300">
+{`TOOL REQUEST
+↓
+POLICY DECISION
+↓
+STRUCTURED AUDIT EVENT
+↓
+DETECTION RULES
+↓
+ALERTS
+↓
+RISK SCORE
+↓
+SEVERITY CLASSIFICATION`}
+            </pre>
           </div>
         </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-6">
-            Three-Stage Progression
-          </h2>
+        <section className="mt-16">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Build Progression
+          </p>
 
-          <div className="space-y-6">
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">STAGE 1</p>
+          <h2 className="mt-3 text-3xl font-bold">Three-Stage Progression</h2>
 
-              <h3 className="text-xl font-semibold mb-3">
-                Structured Audit Logging
-              </h3>
+          <div className="mt-8 grid gap-6">
+            {stages.map((item) => (
+              <div
+                key={item.stage}
+                className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                  {item.stage}
+                </p>
 
-              <p className="text-neutral-400 leading-7 mb-4">
-                Each security-relevant tool request was written to a JSONL log
-                with timestamp, source, tool, decision, reason, authorization
-                state, and arguments.
-              </p>
+                <h3 className="mt-2 text-xl font-semibold text-zinc-100">
+                  {item.title}
+                </h3>
 
-              <p className="text-neutral-300">
-                Result: 6 structured security events recorded
-              </p>
-            </div>
+                <p className="mt-3 leading-7 text-zinc-400">
+                  {item.description}
+                </p>
 
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">STAGE 2</p>
-
-              <h3 className="text-xl font-semibold mb-3">
-                Detection Rules
-              </h3>
-
-              <p className="text-neutral-400 leading-7 mb-4">
-                Detection logic identified denied actions, untrusted sources,
-                unauthorized high-risk tools, restricted file access, and
-                unknown tools.
-              </p>
-
-              <p className="text-neutral-300">
-                Result: 4 alerted events and 8 total alerts
-              </p>
-            </div>
-
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">STAGE 3</p>
-
-              <h3 className="text-xl font-semibold mb-3">
-                Risk Scoring & Severity
-              </h3>
-
-              <p className="text-neutral-400 leading-7 mb-4">
-                Alerts were weighted and combined into per-event risk scores,
-                which were then classified as INFO, LOW, MEDIUM, HIGH, or
-                CRITICAL.
-              </p>
-
-              <p className="text-neutral-300">
-                Highest-risk event: score 8 — CRITICAL
-              </p>
-            </div>
+                <p className="mt-4 font-medium text-zinc-200">
+                  {item.result}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">Final Results</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">EVENTS</p>
-              <p className="text-3xl font-bold mb-2">6</p>
-              <p className="text-neutral-400">
-                Total structured security events
-              </p>
-            </div>
-
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">ALERTS</p>
-              <p className="text-3xl font-bold mb-2">8</p>
-              <p className="text-neutral-400">
-                Alerts generated across 4 events
-              </p>
-            </div>
-
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">HIGH SEVERITY</p>
-              <p className="text-3xl font-bold mb-2">2</p>
-              <p className="text-neutral-400">
-                Events classified as HIGH
-              </p>
-            </div>
-
-            <div className="border border-neutral-800 rounded-2xl p-6">
-              <p className="text-sm text-neutral-500 mb-2">CRITICAL</p>
-              <p className="text-3xl font-bold mb-2">1</p>
-              <p className="text-neutral-400">
-                Event classified as CRITICAL
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">
+        <section className="mt-16 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             Highest-Risk Event
+          </p>
+
+          <h2 className="mt-3 text-2xl font-bold">
+            CRITICAL send_email attempt
           </h2>
 
-          <div className="border border-neutral-800 rounded-2xl p-6 font-mono text-sm text-neutral-300 leading-8">
-            Tool: send_email
-            <br />
-            Source: untrusted_document
-            <br />
-            Decision: DENY
-            <br />
-            Risk score: 8
-            <br />
-            Severity: CRITICAL
+          <div className="mt-6 overflow-x-auto rounded-xl bg-black p-5">
+            <pre className="text-sm leading-7 text-cyan-300">
+{`Tool: send_email
+Source: untrusted_document
+Decision: DENY
+Risk score: 8
+Severity: CRITICAL`}
+            </pre>
           </div>
 
-          <p className="text-neutral-400 leading-8 mt-6">
+          <p className="mt-6 leading-7 text-zinc-400">
             The event triggered three security alerts: a denied action, an
             untrusted source, and an unauthorized high-risk tool request.
           </p>
         </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">Key Finding</h2>
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold">Key Finding</h2>
 
-          <p className="text-neutral-400 leading-8">
-            Blocking a dangerous action is only part of security. A mature AI
-            system also needs telemetry that makes suspicious behavior visible,
-            measurable, and prioritizable.
-          </p>
+          <div className="mt-6 rounded-xl border border-zinc-800 bg-zinc-900/40 p-6">
+            <p className="leading-8 text-zinc-300">
+              Blocking a dangerous action is only part of security. A mature AI
+              system also needs telemetry that makes suspicious behavior
+              visible, measurable, and prioritizable.
+            </p>
+          </div>
         </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">
-            Skills Demonstrated
-          </h2>
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold">Skills Demonstrated</h2>
 
-          <div className="flex flex-wrap gap-3">
-            {[
-              "Python",
-              "JSON",
-              "JSONL",
-              "Security Logging",
-              "Detection Engineering",
-              "Risk Scoring",
-              "Incident Severity",
-              "Security Telemetry",
-              "Agent Security",
-              "Threat Monitoring",
-              "Authorization Logging",
-            ].map((skill) => (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {skills.map((skill) => (
               <span
                 key={skill}
-                className="border border-neutral-700 rounded-full px-4 py-2 text-sm text-neutral-300"
+                className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1 text-xs text-zinc-400"
               >
                 {skill}
               </span>
@@ -245,32 +276,67 @@ export default function Lab07Page() {
           </div>
         </section>
 
-        <section className="mb-14">
-          <h2 className="text-2xl font-semibold mb-4">Next Step</h2>
+        <section className="mt-16 rounded-2xl border border-cyan-900/60 bg-cyan-950/20 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Final Result
+          </p>
 
-          <p className="text-neutral-400 leading-8">
-            Future labs will build on this telemetry foundation with event
+          <h2 className="mt-3 text-3xl font-bold">
+            Security events became actionable incident signals.
+          </h2>
+
+          <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
+            The completed pipeline transformed raw tool-use decisions into
+            structured audit events, alerts, weighted risk scores, and severity
+            classifications that could be used to prioritize investigation and
+            future automated response.
+          </p>
+        </section>
+
+        <section className="mt-16 rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            Next Step
+          </p>
+
+          <h2 className="mt-3 text-2xl font-bold">
+            From isolated events to stateful security
+          </h2>
+
+          <p className="mt-4 leading-7 text-zinc-400">
+            Future labs build on this telemetry foundation with event
             correlation, repeated-attempt detection, automated responses,
             monitoring, and stronger agent containment.
           </p>
         </section>
 
-        <div className="flex gap-4 flex-wrap">
-          <a
-            href="https://github.com/jeremyneutronink-afk/lab-07-security-audit-logging"
-            target="_blank"
-            className="bg-white text-black px-6 py-3 rounded-lg font-semibold"
-          >
-            View Source Code
-          </a>
+        <section className="mt-16 border-t border-zinc-800 pt-10">
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://github.com/jeremyneutronink-afk/lab-07-security-audit-logging"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-white px-5 py-3 font-semibold text-black transition hover:bg-zinc-200"
+            >
+              View Code on GitHub
+            </a>
 
-          <a
-            href="/labs"
-            className="border border-neutral-700 px-6 py-3 rounded-lg font-semibold"
-          >
-            View All Labs
-          </a>
-        </div>
+            <a
+              href="https://youtube.com/shorts/wd1OIWbLxMg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-zinc-700 px-5 py-3 font-semibold transition hover:bg-zinc-900"
+            >
+              Watch on YouTube
+            </a>
+
+            <a
+              href="/labs"
+              className="rounded-lg border border-zinc-700 px-5 py-3 font-semibold transition hover:bg-zinc-900"
+            >
+              Back to Labs
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
