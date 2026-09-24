@@ -132,59 +132,24 @@ const labs = [
     ],
     result: "17/17 Passed",
   },
-  {/* LAB 12 — Multi-Agent Trust Boundaries and Message Security */}
-<a
-  href="/labs/lab-12-multi-agent-message-security"
-  className="group block rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition hover:border-cyan-500/60 hover:bg-zinc-900"
->
-  <div className="flex flex-wrap items-start justify-between gap-4">
-    <div>
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
-        Lab 12
-      </p>
-
-      <h3 className="mt-2 text-2xl font-bold text-zinc-100">
-        Multi-Agent Trust Boundaries and Message Security
-      </h3>
-    </div>
-
-    <span className="rounded-full border border-emerald-800 bg-emerald-950/40 px-3 py-1 text-xs font-semibold text-emerald-400">
-      17/17 Passed
-    </span>
-  </div>
-
-  <p className="mt-4 leading-7 text-zinc-400">
-    Built a secure multi-agent messaging architecture with authenticated
-    identities, signed messages, replay protection, content provenance,
-    purpose and scope binding, full message-chain verification, chain-level
-    authorization policy, and confused-deputy defenses.
-  </p>
-
-  <div className="mt-5 flex flex-wrap gap-2 text-xs text-zinc-400">
-    {[
-      "AI Security",
-      "Multi-Agent Security",
-      "Message Integrity",
-      "Provenance",
-      "Authorization",
-      "Authority Chains",
-      "Prompt Injection",
-      "HMAC",
-    ].map((tag) => (
-      <span
-        key={tag}
-        className="rounded-full border border-zinc-800 bg-zinc-950 px-3 py-1"
-      >
-        {tag}
-      </span>
-    ))}
-  </div>
-
-  <p className="mt-6 font-semibold text-zinc-200 transition group-hover:text-cyan-400">
-    View Lab →
-  </p>
-</a>
-];
+  {
+  number: "12",
+  title: "Multi-Agent Trust Boundaries and Message Security",
+  description:
+    "Built a secure multi-agent messaging system with authenticated identities, signed messages, replay protection, provenance tracking, scoped authority, full message-chain validation, and confused-deputy defenses.",
+  route: "/labs/lab-12-multi-agent-message-security",
+  github:
+    "https://github.com/jeremyneutronink-afk/lab-12-multi-agent-message-security",
+  tags: [
+    "AI Security",
+    "Multi-Agent Security",
+    "Provenance",
+    "Authorization",
+    "Message Security",
+    "Authority Chains",
+  ],
+  result: "17/17 Passed",
+},
 
 function LabCard({ lab }) {
   return (
