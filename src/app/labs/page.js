@@ -150,7 +150,7 @@ const labs = [
   ],
   result: "17/17 Passed",
 },
-
+]
 function LabCard({ lab }) {
   return (
     <article className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 sm:p-8 transition duration-200 hover:border-cyan-500/60 hover:bg-zinc-900">
